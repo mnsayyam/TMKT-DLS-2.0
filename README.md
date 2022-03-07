@@ -16,10 +16,7 @@ Scenario: Admin needs to filter
   Then: The filter should be applied on all pages 
  
 
- 
-Scenario: Admin needs Server-side Pagination 
-  Given: I apply server-side pagination on hands-on table 
-  Then: The server-side pagination should be applied on all pages 
+
  
 
  
@@ -37,7 +34,7 @@ Scenario: Admin needs to change disposition
    
    
    
-   AGENT FEATURE FILE
+ 
    
    Scenario: Admin needs to change disposition 
    Given: I apply tour final disposition equals to no show  
@@ -47,26 +44,29 @@ Scenario: Admin needs to change disposition
    
    
    
- Scenario: Admin can filter/sort all colums
+ Scenario: Admin can filter/sort all columns
  
- Given: I apply filter/sort on any colums
+ Given: I apply filter/sort on any columns
    Then: apply filter/sort on that column
    
    
       
  Scenario: Admin can assign one or more leads to agent
  
- Given: I can group or select multiple leads in the hands-on table via checkboxes
+ Given: I need to assign multiple leads
+ I can group or select multiple leads in the hands-on table via checkboxes
    Then: assign each row or selecting all in the current filtered view
    
  Given: I assign agent to a group of leads 
    Then: agent will be assigned to a group of leads
  
- 
+ Scenario:Leads should be sortedon priority basis
+ Given: The leads have priority 1-5 assigned to them 
+ Then: The leads should be sorted in hands-on table on priority 1-5
  
  Scenario: Admin can Assign priorities (the order in which the leads are called) order of leads in a list
  
- Given: I can assign prioritiesB
+ Given: I can assign priorities
    Then: I will be able to group or select multiple leads in the table via checkboxes against each row or selecting all in the current filtered view
    
  Given: I can assign priorities
